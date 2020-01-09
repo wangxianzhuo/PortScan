@@ -1,0 +1,21 @@
+{
+    "scanList":[
+        {
+            "ip": "",
+            "port":[
+                "",
+                ""
+            ]
+        }
+    ],
+    "outputList":[
+        {
+            "name":"posgresql",
+            "ref": ""
+        },
+        {
+            "name":"stdout",
+            "ref": ""
+        }
+    ]
+}
