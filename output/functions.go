@@ -28,10 +28,10 @@ func Load(confs map[string]string) []Outputer {
 			}
 
 			result = append(result, pgOutputer)
-			log.Println("加载postgresql输出器，成功")
+			log.Println("加载postgresql输出器\t\t成功")
 		case "stdout":
 			result = append(result, STDOutOutputer{})
-			log.Println("加载stdout输出器，成功")
+			log.Println("加载stdout输出器\t\t成功")
 		}
 	}
 	return result

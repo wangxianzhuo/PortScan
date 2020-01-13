@@ -8,8 +8,8 @@ type Configuration struct {
 
 // ScanObject ...
 type ScanObject struct {
-	IP   string   `json:"ip"`
-	Port []string `json:"port"`
+	IP    string `json:"ip"`
+	Ports []int  `json:"ports"`
 }
 
 // OutputObject ...
