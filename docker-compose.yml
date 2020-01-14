@@ -1,0 +1,12 @@
+version: '2'
+
+services:
+  portScan:
+    image: port-scan:latest
+    container_name: portScan
+    volumes:
+      - /etc/timezone:/etc/timezone:ro
+      - /etc/localtime:/etc/localtime:ro
+      - ./config.json:/usr/app/config.json:ro
+    restart: always
+    command: --cron "0 * * * * *" --timeout 10

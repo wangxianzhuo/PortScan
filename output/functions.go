@@ -28,7 +28,7 @@ func Load(confs map[string]string) []Outputer {
 			}
 
 			result = append(result, pgOutputer)
-			log.Println("加载postgresql输出器\t\t成功")
+			log.Println("加载postgresql输出器\t成功")
 		case "stdout":
 			result = append(result, STDOutOutputer{})
 			log.Println("加载stdout输出器\t\t成功")
@@ -38,9 +38,9 @@ func Load(confs map[string]string) []Outputer {
 }
 
 // All 执行全部相关输出器Output函数
-func All(outputers []Outputer, msg string) {
+func All(outputers []Outputer, msg, address string) {
 	for _, op := range outputers {
-		err := op.Output(msg)
+		err := op.Output(msg, address)
 		if err != nil {
 			log.Println("ERROR:", err)
 		}

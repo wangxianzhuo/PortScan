@@ -71,7 +71,7 @@ func main() {
 					// 扫描端口
 					err := scanPort(ip, port)
 					if err != nil {
-						output.All(outputers, fmt.Sprint(err))
+						output.All(outputers, fmt.Sprint(err), fmt.Sprintf("%s:%d", ip, port))
 					}
 					<-scanRoutineLimit
 				}(scanObj.IP, port)

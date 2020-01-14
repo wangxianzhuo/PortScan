@@ -10,8 +10,8 @@
     ],
     "outputList":[
         {
-            "name":"posgresql",
-            "ref": ""
+            "name":"postgresql",
+            "ref": "host=127.0.0.1 user=dev password=dev dbname=gather sslmode=disable"
         },
         {
             "name":"stdout",
